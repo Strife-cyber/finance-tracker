@@ -10,15 +10,10 @@ class LandingMobile extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.teal,
       appBar: AppBar(
-        backgroundColor: Colors.teal, // Replaced teal with blue-grey
-        leading: const CircleAvatar(
-            backgroundImage: AssetImage('assets/icons/nexus.jpeg')),
-        title: const Padding(
-          padding: EdgeInsets.only(left: 50.0),
-          child: Text(
-            'Nexus Finance Tracker',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
+        backgroundColor: Colors.teal,
+        title: const Text(
+          'Nexus Finance Tracker',
+          style: TextStyle(color: Colors.white, fontFamily: 'Montaga'),
         ),
       ),
       body: SafeArea(
@@ -27,11 +22,14 @@ class LandingMobile extends StatelessWidget {
           children: [
             Expanded(
               flex: 1,
-              child: Image.asset(
-                'assets/images/base.jpg',
-                width: double.infinity,
-                height: double.infinity,
-                fit: BoxFit.cover, // Consider BoxFit.cover if it suits better
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Image.asset(
+                  'assets/images/base.jpg',
+                  width: double.infinity,
+                  height: double.infinity,
+                  fit: BoxFit.cover, // Consider BoxFit.cover if it suits better
+                ),
               ),
             ),
             Expanded(
@@ -44,13 +42,13 @@ class LandingMobile extends StatelessWidget {
                       child: Text(
                         'Keep track of your finances with us',
                         style: TextStyle(
-                          color: Colors.black, // Ensure text is visible
-                          fontSize: 16,
-                        ),
+                            color: Colors.black, // Ensure text is visible
+                            fontSize: 16,
+                            fontFamily: 'Montaga'),
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    const SizedBox(height: 40),
+                    const Spacer(),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: ElevatedButton(
@@ -62,12 +60,13 @@ class LandingMobile extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white, // Matches app bar
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(5),
                           ),
                         ),
                         child: const Padding(
                           padding: EdgeInsets.symmetric(vertical: 12.0),
-                          child: Text('Sign Up'),
+                          child: Text('Sign Up',
+                              style: TextStyle(fontFamily: 'Pacifico')),
                         ),
                       ),
                     ),
@@ -83,16 +82,18 @@ class LandingMobile extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.teal[400],
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(5),
                           ),
                         ),
                         child: const Padding(
                           padding: EdgeInsets.symmetric(vertical: 12.0),
                           child: Text('Log In',
-                              style: TextStyle(color: Colors.white)),
+                              style: TextStyle(
+                                  color: Colors.white, fontFamily: 'Pacifico')),
                         ),
                       ),
                     ),
+                    const SizedBox(height: 50)
                   ],
                 ))
           ],

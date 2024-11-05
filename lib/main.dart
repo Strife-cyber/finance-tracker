@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
-  await dotenv.load(); // Load environment variables
+  await dotenv.load(fileName: ".env"); // Load environment variables
 
   await Supabase.initialize(
     url: dotenv.env['SUPABASE_URL']!, // Access the Supabase URL
